@@ -5,8 +5,8 @@
 
 **Источники**
 <!-- blank line -->
-API source: https://serpstat.com/api/37-top-for-a-keyword-keywordtop/#Python \
-Примеры результатов: https://docs.google.com/spreadsheets/d/14Hju2FbcSFjdooRRbSoCywG1ijSQXX4iQ5yCPgdtc_0/edit#gid=159025064
+API source: https://serpstat.com/api/37-top-for-a-keyword-keywordtop/#Python 
+Примеры использования API: https://docs.google.com/spreadsheets/d/14Hju2FbcSFjdooRRbSoCywG1ijSQXX4iQ5yCPgdtc_0/edit#gid=159025064
 
 
 ## Installation (Установка)
