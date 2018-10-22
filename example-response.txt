@@ -1,0 +1,55 @@
+1. Parameteres
+         'query': qr,  # string for get info
+        'se': 'g_us',  # string search engine (g_us or g_ru)
+        'token': my_token,  # string personal token
+
+
+2. Output format
+
+rq="вложение%20заработать%20интернет"
+{'left_lines': 99986,
+ 'result': {},
+ 'status_code': 404,
+ 'status_msg': 'Keyword not found'}
+
+api.serpstat.com/v3/keyword_top?query=buy%20laptop&token=XXX&se=XXX
+
+api.serpstat.com/v3/keyword_top?query=как%20заработать%20деньги%20в%20интернете&token=a640cea90e04722ac2fb989023122b74&se=g_ru
+
+как%20заработать%20деньги%20в%20интернете
+{'left_lines': 99985,
+ 'result': {'ads': [],
+            'results': '13900000',
+            'top': [{'domain': 'slonodrom.ru',
+                     'position': 1,
+                     'snippet': '\n'
+                                '2 апр. 2017 г. - Как заработать деньги в '
+                                'интернете? ТОП-27 лучших способов заработка '
+                                'без вложений и с вложениями! + ТОП-10 сайтов '
+                                'для\xa0...',
+                     'title': 'Как заработать деньги в интернете - 27 способов '
+                              'заработка +10 ...',
+                     'url': 'https://slonodrom.ru/kak-zarabotat-dengi-v-internete/'},
+                    {'domain': 'sergey-ivanisov.ru',
+                     'position': 2,
+                     'snippet': '\n'
+                                '18 сент. 2018 г. - Они отлично пойдут для '
+                                'новичков, школьников и тех, кто просто хочет '
+                                'убедиться, что деньги в интернете заработать '
+                                'реально.',
+                     'title': '30 способов Заработка в Интернете — лучшее на '
+                              '2018 год',
+                     'url': 'https://sergey-ivanisov.ru/kak-zarabotat-v-internete.html'},
+                     {'domain': 'rabota-free.ru',
+                     'position': 98,
+                     'snippet': '\n'
+                                '4 янв. 2017 г. - Как заработать в интернете '
+                                'немного денег? Небольшой заработок денег в '
+                                'интернете доступен всем! Перечень сайтов, где '
+                                'можно\xa0...',
+                     'title': 'НЕБОЛЬШОЙ ЗАРАБОТОК В ИНТЕРНЕТЕ | Как '
+                              'заработать деньги ...',
+                     'url': 'https://rabota-free.ru/?page_id=10'}]},
+ 'status_code': 200,
+ 'status_msg': 'OK'}
+

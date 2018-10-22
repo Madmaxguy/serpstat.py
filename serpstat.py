@@ -57,10 +57,9 @@ method = 'keyword_top'
 
 for i in range(1, 100):
     qr = sheet.cell(row=i, column=1).value.replace(" ", "%20")
-    print(qr)
     params = {
         'query': qr,  # string for get info
-        'se': 'g_us',  # string search engine
+        'se': 'g_ru',  # string search engine
         'token': my_token,  # string personal token
     }
 
@@ -76,5 +75,13 @@ for i in range(1, 100):
         print("API request error: {error}".format(error=e0))
 
     data = json.loads(json_data)
-    pprint.pprint(data)
-    print(params)
+    #pprint.pprint(data)
+    #print(params)
+
+    #getting output for requests
+    print(qr)
+    print(status_code)
+    print(status_msg)
+    print(results_found)
+    print(domains)
+    print(urls)
