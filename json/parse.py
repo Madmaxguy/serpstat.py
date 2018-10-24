@@ -6,7 +6,7 @@ from tkinter import *
 from tkinter import Tk, Label, Button, Entry, StringVar, W, E, filedialog
 
 
-
+# Input Token and Choose File
 class File_Token_Chooser:
 
     def __init__(self, master):
@@ -19,9 +19,16 @@ class File_Token_Chooser:
         self.total_label_text = IntVar()
 
         self.labelT = Label(master, text="Token:")
-        self.labelF = Label(master, text="File Path:")
         self.entry1 = Entry(master, textvariable=self.token) #, validate="key", validatecommand=(vcmd, '%P'))
+
         self.entry2 = Entry(master)
+        self.labelF = Label(master, text="File Path:")
+
+        self.start_cell = Entry(master, text=1)
+        self.labelStart = Label(master, text='Номер первой ячейки:')
+
+        self.end_cell = Entry(master, text=2)
+        self.labelEnd = Label(master, text='Номер последней ячейки:')
 
         self.ok_button = Button(master, text="OK", command=master.quit)
         self.choose_button = Button(master, text="Choose file", command=lambda: self.choose())
@@ -29,14 +36,20 @@ class File_Token_Chooser:
         # LAYOUT
 
         self.entry1.grid(row=1, column=1, columnspan=3, sticky=W+E)
-        self.entry2.grid(row=2, column=1, columnspan=3, sticky=W + E)
         self.labelT.grid(row=1, column=0)
+        self.entry2.grid(row=2, column=1, columnspan=3, sticky=W + E)
         self.labelF.grid(row=2, column=0)
 
-        self.ok_button.grid(row=3, column=0)
+        self.start_cell.grid(row=3, column=1, columnspan=1, sticky=W + E)
+        self.labelStart.grid(row=3, column=0)
+        self.end_cell.grid(row=4, column=1, columnspan=1, sticky=W + E)
+        self.labelEnd.grid(row=4, column=0)
+
+        self.ok_button.grid(row=5, column=0)
         self.choose_button.grid(row=2, column=5)
 
     def get_filepath(self):
+
         return self.filepath
 
     def get_toke(self):
@@ -50,8 +63,11 @@ root = Tk()
 my_gui = File_Token_Chooser(root)
 root.mainloop()
 
-print(my_gui.get_filepath())
-print(my_gui.get_toke())
+print("Token entered" + my_gui.get_toke())
+print("Using builtin getter, filepath: " + my_gui.entry2.get())
+print("Using improvised getter: " + my_gui.get_filepath())
+print("Starting cell: " + my_gui.end_cell.get())
+print("End cell: " + my_gui.start_cell.get())
 
 
 
