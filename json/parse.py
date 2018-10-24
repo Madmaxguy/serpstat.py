@@ -1,9 +1,11 @@
 #!/usr/bin/python
 import json
 import openpyxl
+import time
 from datetime import datetime
 from tkinter import *
 from tkinter import Tk, Label, Button, Entry, StringVar, W, E, filedialog
+from tkinter.ttk import *
 
 
 # Input Token and Choose File
@@ -16,11 +18,9 @@ class File_Token_Chooser:
         self.token = "a640cea90e04722ac2fb989023122b74"
         self.filepath = StringVar()
 
-        self.total_label_text = IntVar()
 
         self.labelT = Label(master, text="Token:")
         self.entry1 = Entry(master, textvariable=self.token) #, validate="key", validatecommand=(vcmd, '%P'))
-
         self.entry2 = Entry(master)
         self.labelF = Label(master, text="File Path:")
 
@@ -58,21 +58,23 @@ class File_Token_Chooser:
     def choose(self):
         self.filepath = filedialog.askopenfilename()
 
-
+# Running GUI input
 root = Tk()
 my_gui = File_Token_Chooser(root)
 root.mainloop()
 
-print("Token entered" + my_gui.get_toke())
-print("Using builtin getter, filepath: " + my_gui.entry2.get())
-print("Using improvised getter: " + my_gui.get_filepath())
-print("Starting cell: " + my_gui.end_cell.get())
-print("End cell: " + my_gui.start_cell.get())
+# Getting Data from GUI input
+# print("Token entered" + my_gui.get_toke())
+# print("Using builtin getter, filepath: " + my_gui.entry2.get())
+# print("Using improvised getter: " + my_gui.get_filepath())
+token = my_gui.get_toke()
+filepath = my_gui.get_filepath()
+start_cell = my_gui.start_cell.get()
+end_cell = my_gui.end_cell.get()
 
 
 
-
-# Output
+# Output to Excel Class
 def output_to_excel():
     now = datetime.now()
     output_file = 'results_' + now.strftime("%Y-%m-%d_%H:%M:%S") + '.xlsx'
@@ -100,11 +102,13 @@ def output_to_excel():
 
     wb.save(output_file)
 
+# Open example JSON file
 file = open("json.example","r")
-#print(file.read())
-
+# Parse example JSON file
 jsondata = json.loads(file.read())
 
+
+# Test. Outputting to Console data from JSON
 domains = ""
 for item in jsondata['result']['top']:
     domains += item.get("domain") + ","
@@ -125,6 +129,11 @@ status_msg = "%i"% (jsondata['status_code']) + ", " + jsondata['status_msg']
 print(status_msg)
 
 
-
-# Output
+# Write Data to Excel File
 # output_to_excel()
+
+root = Tk()
+T = Text(root, height=2, width=30)
+T.pack()
+T.insert(END, "Done")
+mainloop()

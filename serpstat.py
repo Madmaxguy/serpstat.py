@@ -7,32 +7,79 @@ from datetime import datetime
 import openpyxl
 from tkinter import *
 from tkinter import filedialog
-import bpy
 
 host = 'http://api.serpstat.com/v3'
 method = 'keyword_top'
 se = 'g_ru'
 
-## Get filename
-root = Tk()
-root.withdraw()
-file_path = filedialog.askopenfilename()
-print(file_path)
+# Input Token and Choose File
+class File_Token_Chooser:
 
-# Inputting Token for API
-master = Tk()
-Label(master, text="Token").grid(row=0)
-e1 = Entry(master)
-e1.grid(row=0, column=1)
-Button(master, text='OK', command=master.quit).grid(row=3, column=0, sticky=W, pady=4)
-mainloop( )
-my_token = e1.get()
-print(my_token)
+    def __init__(self, master):
+        self.master = master
+        master.title("Keyword parser")
+
+        self.token = "a640cea90e04722ac2fb989023122b74"
+        self.filepath = StringVar()
+
+
+        self.labelT = Label(master, text="Token:")
+        self.entry1 = Entry(master, textvariable=self.token) #, validate="key", validatecommand=(vcmd, '%P'))
+        self.entry2 = Entry(master)
+        self.labelF = Label(master, text="File Path:")
+
+        self.start_cell = Entry(master, text=1)
+        self.labelStart = Label(master, text='Номер первой ячейки:')
+
+        self.end_cell = Entry(master, text=2)
+        self.labelEnd = Label(master, text='Номер последней ячейки:')
+
+        self.ok_button = Button(master, text="OK", command=master.quit)
+        self.choose_button = Button(master, text="Choose file", command=lambda: self.choose())
+
+        # LAYOUT
+
+        self.entry1.grid(row=1, column=1, columnspan=3, sticky=W+E)
+        self.labelT.grid(row=1, column=0)
+        self.entry2.grid(row=2, column=1, columnspan=3, sticky=W + E)
+        self.labelF.grid(row=2, column=0)
+
+        self.start_cell.grid(row=3, column=1, columnspan=1, sticky=W + E)
+        self.labelStart.grid(row=3, column=0)
+        self.end_cell.grid(row=4, column=1, columnspan=1, sticky=W + E)
+        self.labelEnd.grid(row=4, column=0)
+
+        self.ok_button.grid(row=5, column=0)
+        self.choose_button.grid(row=2, column=5)
+
+    def get_filepath(self):
+
+        return self.filepath
+
+    def get_toke(self):
+        return self.token
+
+    def choose(self):
+        self.filepath = filedialog.askopenfilename()
+
+# Running GUI input
+root = Tk()
+my_gui = File_Token_Chooser(root)
+root.mainloop()
+
+# Getting Data from GUI input
+# print("Token entered" + my_gui.get_toke())
+# print("Using builtin getter, filepath: " + my_gui.entry2.get())
+# print("Using improvised getter: " + my_gui.get_filepath())
+my_token = my_gui.get_toke()
+file_path = my_gui.get_filepath()
+start_cell = my_gui.start_cell.get()
+end_cell = my_gui.end_cell.get()
 
 # Getting Input keywords
 wb1 = load_workbook(file_path)
-sheet = wb1.get_sheet_by_name('Лист1')
-sheet.title
+sheet_input = wb1.get_sheet_by_name('Лист1')
+sheet_input.title
 
 
 # Writing output file
@@ -57,8 +104,8 @@ sheet.cell(row=1, column=5).font = openpyxl.styles.Font(bold=True)
 
 
 
-for i in range(1, 100):
-    qr = sheet.cell(row=i, column=1).value.replace(" ", "%20")
+for i in range(int(start_cell), int(end_cell)):
+    qr = sheet_input.cell(row=i, column=1).value.replace(" ", "%20")
     params = {
         'query': qr,  # string for get info
         'se': se ,  # string search engine
@@ -98,10 +145,16 @@ for i in range(1, 100):
     print(domains)
     print(urls)
     print("lines left: " + results_found)
-    sheet.cell(row=i + 1, column=1).value = qr
+    sheet.cell(row=i + 1, column=1).value = qr.replace("%20", " ")
     sheet.cell(row=i + 1, column=2).value = status_msg
     sheet.cell(row=i + 1, column=3).value = results_found
     sheet.cell(row=i + 1, column=4).value = domains
     sheet.cell(row=i + 1, column=5).value = urls
 
 wb2.save(output_file)
+
+root = Tk()
+T = Text(root, height=2, width=30)
+T.pack()
+T.insert(END, "Done")
+mainloop()
