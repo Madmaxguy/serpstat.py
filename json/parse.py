@@ -3,32 +3,28 @@ import json
 import openpyxl
 from datetime import datetime
 from tkinter import *
-import random
-from tkinter import Tk, Label, Button, Entry, StringVar, DISABLED, NORMAL, END, W, E
+from tkinter import Tk, Label, Button, Entry, StringVar, W, E, filedialog
 
 
-class Calculator:
+
+class File_Token_Chooser:
 
     def __init__(self, master):
         self.master = master
-        master.title("Calculator")
+        master.title("Keyword parser")
 
-        self.total = 0
-        self.entered_number = 0
+        self.token = "a640cea90e04722ac2fb989023122b74"
+        self.filepath = StringVar()
 
         self.total_label_text = IntVar()
 
-        #vcmd = master.register(self.validate) # we have to wrap the command
         self.labelT = Label(master, text="Token:")
         self.labelF = Label(master, text="File Path:")
-        self.entry1 = Entry(master) #, validate="key", validatecommand=(vcmd, '%P'))
+        self.entry1 = Entry(master, textvariable=self.token) #, validate="key", validatecommand=(vcmd, '%P'))
         self.entry2 = Entry(master)
 
-        self.ok_button = Button(master, text="OK")
+        self.ok_button = Button(master, text="OK", command=master.quit)
         self.choose_button = Button(master, text="Choose file", command=lambda: self.choose())
-        #self.add_button = Button(master, text="+", command=lambda: self.update("add"))
-        #self.subtract_button = Button(master, text="-", command=lambda: self.update("subtract"))
-        #self.reset_button = Button(master, text="Reset", command=lambda: self.update("reset"))
 
         # LAYOUT
 
@@ -40,34 +36,25 @@ class Calculator:
         self.ok_button.grid(row=3, column=0)
         self.choose_button.grid(row=2, column=5)
 
+    def get_filepath(self):
+        return self.filepath
+
+    def get_toke(self):
+        return self.token
+
     def choose(self):
-        return True
+        self.filepath = filedialog.askopenfilename()
 
-    def ok(self):
-        token = self.entry1.get()
-        filename = self.entry2.get()
-
-    def update(self, method):
-        if method == "add":
-            self.total += self.entered_number
-        elif method == "subtract":
-            self.total -= self.entered_number
-        else: # reset
-            self.total = 0
-
-        self.total_label_text.set(self.total)
-        self.entry.delete(0, END)
 
 root = Tk()
-my_gui = Calculator(root)
+my_gui = File_Token_Chooser(root)
 root.mainloop()
 
-print(my_gui.token)
+print(my_gui.get_filepath())
+print(my_gui.get_toke())
 
 
-#root = Tk()
-#d = MyDialog(root)
-#root.mainloop()
+
 
 # Output
 def output_to_excel():
