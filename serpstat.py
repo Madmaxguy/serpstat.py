@@ -10,7 +10,8 @@ from tkinter import filedialog
 
 host = 'http://api.serpstat.com/v3'
 method = 'keyword_top'
-se = 'g_ru'
+# se = 'g_ru'
+
 
 # Input Token and Choose File
 class File_Token_Chooser:
@@ -21,7 +22,13 @@ class File_Token_Chooser:
 
         self.token = "a640cea90e04722ac2fb989023122b74"
         self.filepath = StringVar()
+        self.greeter = Text(master)
+        self.greeter.insert(INSERT, "Добро пожаловать в парсер запросов по ключевым словам\nДля парсинга введите ваши данные:\nТокен, Выберите файл Excel .xlsx. Ключевые слова нужно указывать в первом столбце.\nТакже нужно ввести номера первой и последней ячеек, содержащих ключевые слова для поиска\n\nТакже нужно указать поисковый движок (g_su, g_en и тд).\nПолный список есть тут https://serpstat.com/api/6-request-parameters/ \n\nПосле чего нажмите кнопку ОК\nПо завершении программа выведет сообщение с именем файла")
 
+        # self.lst1 = []
+        self.se = StringVar(master)
+        self.se.set("g_ru")
+        self.w = OptionMenu(master, self.se, "g_us","g_uk","g_au","g_ru","g_ca","g_bg","g_ua","g_za","g_lt","g_lv","g_by","g_kz","g_it","g_es","g_fr","g_de","g_nl","g_br","g_il","g_dk","y_213","y_2","y_187","y_54")
 
         self.labelT = Label(master, text="Token:")
         self.entry1 = Entry(master, textvariable=self.token) #, validate="key", validatecommand=(vcmd, '%P'))
@@ -52,8 +59,13 @@ class File_Token_Chooser:
         self.ok_button.grid(row=5, column=0)
         self.choose_button.grid(row=2, column=5)
 
-    def get_filepath(self):
+        self.greeter.grid(row=6, column=0)
+        self.w.grid(row=6, column=1)
 
+    def get_se(self):
+        return self.se.get()
+
+    def get_filepath(self):
         return self.filepath
 
     def get_toke(self):
@@ -75,6 +87,8 @@ my_token = my_gui.get_toke()
 file_path = my_gui.get_filepath()
 start_cell = my_gui.start_cell.get()
 end_cell = my_gui.end_cell.get()
+se = my_gui.get_se()
+#print("Search Engine from box: " + se)
 
 # Getting Input keywords
 wb1 = load_workbook(file_path)
@@ -153,8 +167,14 @@ for i in range(int(start_cell), int(end_cell)):
 
 wb2.save(output_file)
 
-root = Tk()
-T = Text(root, height=2, width=30)
+
+root2 = Tk()
+T = Text(root2, height=4, width=30)
+B1 = Button(text="Ok", command = root2.destroy)
 T.pack()
+B1.pack()
 T.insert(END, "Done")
+T.insert(END, "\nОсталось запросов по токену:" + left_lines)
+T.insert(END, "\nРезультат сохранен в файл: " + output_file)
+
 mainloop()
