@@ -90,7 +90,7 @@ class FileTokenChooser:
 
         # Preparing new output file
         now = datetime.now()
-        output_file = 'results_' + now.strftime("%Y-%m-%d_%H:%M:%S") + '.xlsx'
+        output_file = 'results_' + now.strftime("%Y-%m-%d_%H-%M-%S") + '.xlsx'
         wb2 = openpyxl.Workbook()
         sheetname = method + "_" + se
         sheet = wb2.active

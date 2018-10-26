@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f06a5d7a-00bc-4cb2-832a-c20aa49eec36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/serpstat.py" beforeDir="false" afterPath="$PROJECT_DIR$/serpstat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,12 +14,12 @@
     <session id="2050885673">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,14 +45,14 @@
         <counts>
           <entry key="example" value="8" />
           <entry key="gitignore" value="11" />
-          <entry key="py" value="7294" />
+          <entry key="py" value="7298" />
           <entry key="txt" value="335" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="354" />
-          <entry key="Python" value="7294" />
+          <entry key="Python" value="7298" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -60,7 +60,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/token.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -69,20 +69,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serpstat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="213" column="35" lean-forward="true" selection-start-line="213" selection-start-column="35" selection-end-line="213" selection-end-column="35" />
+            <state relative-caret-position="1052">
+              <caret line="215" selection-start-line="215" selection-end-line="215" />
               <folding>
                 <element signature="e#18#29#0" expanded="true" />
-                <marker date="1540554970868" expanded="true" signature="3339:7394" ph="..." />
-                <marker date="1540554970868" expanded="true" signature="7394:7398" ph="..." />
-                <marker date="1540554970868" expanded="true" signature="7415:7424" ph="..." />
-                <marker date="1540554970868" expanded="true" signature="7415:7450" ph="..." />
-                <marker date="1540554970868" expanded="true" signature="7655:8296" ph="..." />
-                <marker date="1540554970868" expanded="true" signature="8192:8239" ph="..." />
-                <marker date="1540554970868" expanded="true" signature="8263:8272" ph="..." />
+                <marker date="1540555054261" expanded="true" signature="3339:7394" ph="..." />
+                <marker date="1540555054261" expanded="true" signature="7394:7398" ph="..." />
+                <marker date="1540555054261" expanded="true" signature="7415:7424" ph="..." />
+                <marker date="1540555054261" expanded="true" signature="7415:7450" ph="..." />
+                <marker date="1540555054261" expanded="true" signature="7655:8296" ph="..." />
+                <marker date="1540555054261" expanded="true" signature="8192:8239" ph="..." />
+                <marker date="1540555054261" expanded="true" signature="8263:8272" ph="..." />
               </folding>
             </state>
           </provider>
@@ -91,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/json/parse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-94">
+            <state relative-caret-position="165">
               <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding>
                 <element signature="e#18#29#0" expanded="true" />
@@ -145,7 +145,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1920" />
     <option name="width" value="1468" />
-    <option name="height" value="1034" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -340,7 +340,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1468" height="1034" extended-state="0" />
+    <frame x="1920" y="0" width="1468" height="1030" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23819445" />
@@ -348,7 +348,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49854228" visible="true" weight="0.28744492" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49854228" weight="0.28744492" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -420,24 +420,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/token.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/parse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
+        <state relative-caret-position="165">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
             <element signature="e#18#29#0" expanded="true" />
@@ -447,20 +432,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/serpstat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="213" column="35" lean-forward="true" selection-start-line="213" selection-start-column="35" selection-end-line="213" selection-end-column="35" />
+        <state relative-caret-position="1052">
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
           <folding>
             <element signature="e#18#29#0" expanded="true" />
-            <marker date="1540554970868" expanded="true" signature="3339:7394" ph="..." />
-            <marker date="1540554970868" expanded="true" signature="7394:7398" ph="..." />
-            <marker date="1540554970868" expanded="true" signature="7415:7424" ph="..." />
-            <marker date="1540554970868" expanded="true" signature="7415:7450" ph="..." />
-            <marker date="1540554970868" expanded="true" signature="7655:8296" ph="..." />
-            <marker date="1540554970868" expanded="true" signature="8192:8239" ph="..." />
-            <marker date="1540554970868" expanded="true" signature="8263:8272" ph="..." />
+            <marker date="1540555054261" expanded="true" signature="3339:7394" ph="..." />
+            <marker date="1540555054261" expanded="true" signature="7394:7398" ph="..." />
+            <marker date="1540555054261" expanded="true" signature="7415:7424" ph="..." />
+            <marker date="1540555054261" expanded="true" signature="7415:7450" ph="..." />
+            <marker date="1540555054261" expanded="true" signature="7655:8296" ph="..." />
+            <marker date="1540555054261" expanded="true" signature="8192:8239" ph="..." />
+            <marker date="1540555054261" expanded="true" signature="8263:8272" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="6" selection-end-column="38" />
         </state>
       </provider>
     </entry>
