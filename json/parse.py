@@ -15,7 +15,7 @@ class File_Token_Chooser:
         self.master = master
         master.title("Keyword parser")
 
-        self.token = "a640cea90e04722ac2fb989023122b74"
+        self.token = ""
         self.filepath = StringVar()
 
 
