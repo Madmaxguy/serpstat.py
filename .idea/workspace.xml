@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f06a5d7a-00bc-4cb2-832a-c20aa49eec36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/parse.py" beforeDir="false" afterPath="$PROJECT_DIR$/json/parse.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serpstat.py" beforeDir="false" afterPath="$PROJECT_DIR$/serpstat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,14 +47,14 @@
         <counts>
           <entry key="example" value="8" />
           <entry key="gitignore" value="11" />
-          <entry key="py" value="5740" />
+          <entry key="py" value="7278" />
           <entry key="txt" value="335" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="354" />
-          <entry key="Python" value="5740" />
+          <entry key="Python" value="7278" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -70,29 +71,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serpstat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
+            <state relative-caret-position="-120">
+              <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
               <folding>
                 <element signature="e#18#29#0" expanded="true" />
-                <element signature="e#3420#4939#0" />
-                <marker date="1540483889777" expanded="true" signature="2757:2792" ph="..." />
+                <marker date="1540553783339" expanded="true" signature="3339:7420" ph="..." />
+                <marker date="1540553783339" expanded="true" signature="7420:7424" ph="..." />
+                <marker date="1540553783339" expanded="true" signature="7441:7450" ph="..." />
+                <marker date="1540553783339" expanded="true" signature="7441:7476" ph="..." />
+                <marker date="1540553783339" expanded="true" signature="7681:8322" ph="..." />
+                <marker date="1540553783339" expanded="true" signature="8218:8265" ph="..." />
+                <marker date="1540553783339" expanded="true" signature="8289:8298" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/json/parse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="10" selection-start-line="10" selection-end-line="72" selection-end-column="32" />
+            <state relative-caret-position="251">
+              <caret line="83" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
               <folding>
                 <element signature="e#18#29#0" expanded="true" />
-                <marker date="1540391137640" expanded="true" signature="1692:1697" ph="..." />
-                <marker date="1540391137640" expanded="true" signature="1775:1807" ph="..." />
+                <marker date="1540554206742" expanded="true" signature="1692:1697" ph="..." />
+                <marker date="1540554206742" expanded="true" signature="1775:1807" ph="..." />
               </folding>
             </state>
           </provider>
@@ -133,16 +139,15 @@
         <option value="$USER_HOME$/PycharmProjects/json/json.example" />
         <option value="$USER_HOME$/PycharmProjects/json/parse.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/json/parse.py" />
         <option value="$PROJECT_DIR$/serpstat.py" />
+        <option value="$PROJECT_DIR$/json/parse.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2236" />
-    <option name="y" value="34" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="1920" />
+    <option name="width" value="1468" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -189,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.serpstat">
+  <component name="RunManager" selected="Python.parse (1)">
     <configuration name="parse (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="json" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -260,8 +265,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.serpstat" />
         <item itemvalue="Python.parse (1)" />
+        <item itemvalue="Python.serpstat" />
         <item itemvalue="Python.parse" />
       </list>
     </recent_temporary>
@@ -305,19 +310,33 @@
       <option name="project" value="LOCAL" />
       <updated>1540392453244</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fully working example">
+      <created>1540484036676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540484036676</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fully working example">
+      <created>1540551625442</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1540551625442</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2236" y="34" width="1400" height="1000" extended-state="0" />
+    <frame x="1920" y="0" width="1468" height="1034" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23819445" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49854228" visible="true" weight="0.298627" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49854228" visible="true" weight="0.28744492" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -389,18 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/json/parse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" selection-start-line="10" selection-end-line="72" selection-end-column="32" />
-          <folding>
-            <element signature="e#18#29#0" expanded="true" />
-            <marker date="1540391137640" expanded="true" signature="1692:1697" ph="..." />
-            <marker date="1540391137640" expanded="true" signature="1775:1807" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -418,12 +425,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serpstat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
+        <state relative-caret-position="-120">
+          <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
           <folding>
             <element signature="e#18#29#0" expanded="true" />
-            <element signature="e#3420#4939#0" />
-            <marker date="1540483889777" expanded="true" signature="2757:2792" ph="..." />
+            <marker date="1540553783339" expanded="true" signature="3339:7420" ph="..." />
+            <marker date="1540553783339" expanded="true" signature="7420:7424" ph="..." />
+            <marker date="1540553783339" expanded="true" signature="7441:7450" ph="..." />
+            <marker date="1540553783339" expanded="true" signature="7441:7476" ph="..." />
+            <marker date="1540553783339" expanded="true" signature="7681:8322" ph="..." />
+            <marker date="1540553783339" expanded="true" signature="8218:8265" ph="..." />
+            <marker date="1540553783339" expanded="true" signature="8289:8298" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="83" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+          <folding>
+            <element signature="e#18#29#0" expanded="true" />
+            <marker date="1540554206742" expanded="true" signature="1692:1697" ph="..." />
+            <marker date="1540554206742" expanded="true" signature="1775:1807" ph="..." />
           </folding>
         </state>
       </provider>

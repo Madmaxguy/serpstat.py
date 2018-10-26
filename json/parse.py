@@ -64,9 +64,6 @@ my_gui = File_Token_Chooser(root)
 root.mainloop()
 
 # Getting Data from GUI input
-# print("Token entered" + my_gui.get_toke())
-# print("Using builtin getter, filepath: " + my_gui.entry2.get())
-# print("Using improvised getter: " + my_gui.get_filepath())
 token = my_gui.get_toke()
 filepath = my_gui.get_filepath()
 start_cell = my_gui.start_cell.get()
@@ -80,9 +77,11 @@ def output_to_excel():
     output_file = 'results_' + now.strftime("%Y-%m-%d_%H:%M:%S") + '.xlsx'
     wb = openpyxl.Workbook()
     engine = "g_us"
-    sheetname = "Top_keyword" + engine
-    wb.create_sheet(sheetname)
-    sheet = wb.get_sheet_by_name(sheetname)
+    sheetname = "Top_keyword" + "_" + engine
+    sheet = wb.active
+    sheet.title = sheetname
+    # wb.create_sheet(sheetname)
+    # sheet = wb.get_sheet_by_name(sheetname)
 
     sheet.cell(row=1 + 1, column=1).value = 'Keyword'
     sheet.cell(row=1, column=1).font = openpyxl.styles.Font(bold=True)
@@ -130,7 +129,7 @@ print(status_msg)
 
 
 # Write Data to Excel File
-# output_to_excel()
+output_to_excel()
 
 root = Tk()
 T = Text(root, height=2, width=30)
