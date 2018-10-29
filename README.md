@@ -20,3 +20,10 @@ API source: https://serpstat.com/api/37-top-for-a-keyword-keywordtop/#Python
 ```
 python serpstat.py
 ```
+
+## Check-list
+
+- [ ] Align Labels to the left
+- [ ] Help text on top
+- [ ] Show selected filepath
+- [ ] Progress bar
